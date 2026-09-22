@@ -1,4 +1,4 @@
-# DurakFish
+# The-Fool
 
 An engine for **Podkidnoy Durak** (Подкидной дурак), built the way a
 serious game engine is built: rules first, then information tracking,
