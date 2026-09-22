@@ -1,0 +1,22 @@
+stratified genuine-ranking-change rate (depth 3, all variants)
+
+  by game phase
+    early          n=210   ranking-change  14.8%
+    late           n=230   ranking-change   8.7%
+    mid            n=660   ranking-change  12.6%
+
+  by talon size
+    1-6            n=265   ranking-change  10.9%
+    7+             n=605   ranking-change  14.0%
+    empty          n=230   ranking-change   8.7%
+
+  by legal moves
+    2-3            n=610   ranking-change   6.6%
+    4-6            n=430   ranking-change  17.4%
+    7+             n=60    ranking-change  31.7%
+
+  by seat
+    attacker       n=695   ranking-change  11.7%
+    defender       n=405   ranking-change  13.1%
+
+  root best-vs-second margin (depth 3): median 0.150, near-ties 50.0%

@@ -1,0 +1,31 @@
+SearchNode surface available to an evaluator:
+
+  hand
+  table
+  known_ranks
+  opponent_cards
+  talon_size
+  trump
+  refill_to
+  attack_limit
+  searcher_is_attacker
+  phase
+  to_move
+  kind
+  unknown_own
+
+classification for the talon:
+
+  talon SIZE          PUBLIC      -- node.talon_size, an int
+  talon COMPOSITION   HIDDEN      -- no field holds cards;
+                                     unconstructible, not refused
+  future DRAW ORDER   split:
+     which player draws first  -- rule constant + public seat
+     which CARDS they draw     -- HIDDEN, and never consulted
+
+  source, information_set.py line 37:
+    'The talon's contents and order are hidden; only its size
+     is public.'
+
+  Model C therefore uses only: own_cards, opponent_cards,
+  talon_size, refill_to, searcher_is_attacker. All permitted.

@@ -1,0 +1,31 @@
+DEFECT A -- throw_in_options penalises shedding
+
+  example 1: seed 0, attacker P0
+    own hand        5 -> 4   (a card was played)
+    throw_in_options 1.0 -> 0.0   (weight +0.48)
+    contribution    +0.480 -> +0.000   = -0.480
+    full evaluation +0.084 -> -0.990
+
+  example 2: seed 0, attacker P0
+    own hand        5 -> 4   (a card was played)
+    throw_in_options 1.0 -> 0.0   (weight +0.48)
+    contribution    +0.480 -> +0.000   = -0.480
+    full evaluation +2.084 -> +1.010
+
+  positions where shedding lowered throw_in_options: 1310
+
+DEFECT B -- obligation_pressure rises when the hand shrinks
+
+  positions where shedding raised obligation_pressure with the
+  open-attack count UNCHANGED: 0
+
+  The arithmetic, isolated from any position:
+    1 open attack(s), hand 3 -> 2: pressure 0.3333 -> 0.5000, score -0.3300
+    1 open attack(s), hand 6 -> 5: pressure 0.1667 -> 0.2000, score -0.0660
+    2 open attack(s), hand 4 -> 3: pressure 0.5000 -> 0.6667, score -0.3300
+    The numerator is untouched. Playing a card is punished
+    purely for shrinking the denominator.
+
+  Neither defect needs a contrived position: both occur in
+  ordinary play. The incentive is small per move and relentless,
+  which is why static inspection missed it and play did not.

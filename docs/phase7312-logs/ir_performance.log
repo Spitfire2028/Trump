@@ -1,0 +1,9 @@
+evaluator latency: 200 nodes x 5 repetitions
+
+  evaluator         calls/sec   mean us    p95 us  vs baseline
+  baseline            748,381      1.23      1.60        1.00x
+  flexible            249,859      3.89      7.22        3.00x
+  flex_r1             248,366      3.92      7.16        3.01x
+  flex_r2             613,953      1.53      1.84        1.22x
+  flex_r3             263,073      3.70      6.96        2.84x
+  flex_r4             272,880      3.56      6.98        2.74x

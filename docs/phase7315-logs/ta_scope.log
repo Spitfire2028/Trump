@@ -1,0 +1,14 @@
+scope over 2719 reachable decision positions, seeds 0..24
+
+  hand below refill_to                       1028 (37.8%)
+  talon too short to satisfy both              16 (0.6%)
+  Model A differs from Model C                 16 (0.6%)
+  mean |A - C| where they differ             1.38
+  max  |A - C|                                  2
+
+  by talon size: {'talon 1': 14, 'talon 5': 2}
+  by own hand:   {2: 1, 3: 3, 4: 5, 5: 2, 7: 1, 8: 2, 9: 1, 10: 1}
+  by seat:       {'defender': 7, 'attacker': 9}
+
+  shedding transitions                       5666
+  where the A and C deltas differ              30 (0.5%)

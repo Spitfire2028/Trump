@@ -1,0 +1,7 @@
+cost in play: deterministic depth 3, 25 games each
+
+  evaluator         s/game   games/hour  mean plies  vs baseline
+  baseline           0.013      282,837        55.8        1.00x
+  mechanistic        0.012      289,435        53.2        0.98x
+  structural         0.013      282,296        53.3        1.00x
+  flexible           0.015      236,543        58.5        1.20x

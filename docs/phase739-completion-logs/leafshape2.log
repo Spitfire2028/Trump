@@ -1,0 +1,6 @@
+leaves: 7591  _facing_attacks: 0  facing+undefended: 0
+  ('DEFENSE', 'attacker', 'to_move=OPPONENT')  3760
+  ('ATTACK', 'defender', 'to_move=OPPONENT')  3166
+  ('TAKING', 'defender', 'to_move=OPPONENT')  369
+  ('ATTACK', 'attacker', 'to_move=SELF')  170
+  ('TAKING', 'attacker', 'to_move=SELF')  126

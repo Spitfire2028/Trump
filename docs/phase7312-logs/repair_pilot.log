@@ -1,0 +1,8 @@
+repair pilot: paired-outcome variance, depth 3
+
+  pair                              n    mean      sd  pairs for 5pp
+  baseline vs flexible             40   0.550   0.281            248
+  baseline vs flex_r1              40   0.544   0.295            274
+  baseline vs flex_r2              40   0.500   0.340            364
+  baseline vs flex_r3              40   0.469   0.332            346
+  baseline vs flex_r4              40   0.569   0.306            295

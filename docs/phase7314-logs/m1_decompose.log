@@ -1,0 +1,11 @@
+2926 flat transitions of 7180
+
+  flat because:
+    hand at or below refill_to, talon alive     2926
+    hand above refill_to, talon alive              0
+    talon empty (raw branch, genuinely flat?)      0
+
+  and the converse -- transitions where M1 DID change:
+    total                                       4254
+    of those, the hand crossed refill_to         723
+    of those, the talon was empty               1609

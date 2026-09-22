@@ -1,0 +1,3 @@
+# The DurakFish core engine requires nothing beyond the standard library.
+# Development tooling:
+#   pip install -e ".[dev]"

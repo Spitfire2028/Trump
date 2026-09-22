@@ -1,0 +1,11 @@
+perturbation amplitude at shared leaves: 2570 non-terminal leaves
+  from 120 positions at depth 3, deterministic
+
+  variant                 mean |d|  median |d|   p95 |d|   max |d|   mean |d| / median margin
+  E1_card_only               0.259       0.300     0.600     1.200                       0.86
+  E2_no_card                 3.284       3.000     7.000    11.000                      10.95
+  E3_talon_aware             1.357       1.000     3.500     5.500                       4.52
+  V3_strong_trump            2.561       2.700     8.100    10.800                       8.54
+  V4_strong_obligation       0.350       0.000     2.500     2.500                       1.17
+
+  median root best-vs-second margin at depth 3: 0.300  (n=120)

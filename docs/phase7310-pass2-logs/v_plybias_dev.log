@@ -1,0 +1,13 @@
+[split=dev, n=500]
+
+ply-defect exposure: 30 positions, 200 iterations, common random numbers
+
+  evaluator          terminal leaves   per position
+  baseline                         0           0.00
+  mechanistic                      0           0.00
+  structural                       0           0.00
+  flexible                         0           0.00
+
+  The defect acts only where terminal_score runs. Equal terminal
+  exposure means it cannot favour one evaluator over another.
+ALLDONE

@@ -1,0 +1,48 @@
+Phase 7.3.12 mutation audit -- incentive repairs
+mutating scratch copies; production files are never written to
+41 production sources hashed; timeout 240s
+
+  CAUGHT   M1   [flex_r2] drop the seat gate, restoring the defect being repaired
+           E                   AssertionError: flex_r2
+  CAUGHT   M2   [flex_r2] invert the seat gate: charge the attacker, spare the defender
+           E                   AssertionError: flex_r2
+  CAUGHT   M3   [flex_r2] count defended slots instead of undefended ones
+           E       assert 0.3007977475363679 < (0.39183481933364617 / 2)
+  CAUGHT   M4   [flex_r1] revert rank coverage to the per-card count it replaces
+           E       assert 3.0 == 1.0
+  CAUGHT   M5   [flex_r1] count ranks NOT on the table, inverting the semantics
+           E       assert 0.330830595964336 < (0.39183481933364617 / 2)
+  CAUGHT   M6   [flex_r1] make rank coverage inert
+           E       assert 0.0 == 1.0
+  CAUGHT   M7   [flex_r4] normalise by the hand again -- the rejected divisor
+           E       AssertionError: R4's obligation moved when only the hand changed
+  CAUGHT   M8   [flex_r4] drop the bounded divisor, collapsing R4 into R3
+           E                   assert 1.0 < 1.0
+  CAUGHT   M9   [registry] R3 silently resolves to the unrepaired candidate
+           E           AssertionError: assert <class 'durakfish.ai.evaluation.FlexibleEvaluator'> i
+  CAUGHT   M10  [registry] R2 silently resolves to R4
+           E           AssertionError: assert <class 'durakfish.ai.evaluation.RepairedBoundedEvalua
+  CAUGHT   M11  [registry] every repair silently resolves to the baseline
+           E           AssertionError: assert <class 'durakfish.ai.evaluation.BaselineEvaluator'> i
+  CAUGHT   M12  [registry] an unknown name falls back instead of failing
+           E       Failed: DID NOT RAISE DurakFishError
+  CAUGHT   M13  [registry] promote a repair to the production default
+           E       AssertionError: assert <class 'durakfish.ai.evaluation.RepairedEvaluator'> is Ba
+  CAUGHT   M14  [flex_r3] R3 stops inheriting the repaired obligation
+           E                   AssertionError: flex_r3
+  CAUGHT   M15  [repairs] a repair approximates terminals instead of scoring them
+           E               AssertionError: assert 250.0 == 10000.0
+
+by mutation family:
+  candidate registration     2/2 caught
+  default change             1/1 caught
+  evaluator selection        1/1 caught
+  normalisation              2/2 caught
+  obligation direction       4/4 caught
+  silent baseline fallback   1/1 caught
+  terminal handling          1/1 caught
+  throw-in direction         3/3 caught
+
+production source integrity: INTACT
+caught 15 of 15   {'CAUGHT': 15}
+A

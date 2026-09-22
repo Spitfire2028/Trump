@@ -1,0 +1,8 @@
+[split=test, n=500]
+
+static behaviour on 500 positions
+  evaluator           min      max     mean    stdev   zeros
+  baseline         -18.60    16.50     0.11     4.06    4.2%
+  mechanistic      -18.60    16.50     0.14     3.73    6.8%
+  determinism: identical output over repeated calls  OK
+  positions where candidate favours the larger hand: 0

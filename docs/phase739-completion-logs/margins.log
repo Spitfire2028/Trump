@@ -1,0 +1,9 @@
+root-margin analysis: 160 positions, depth 3, all variants pooled, deterministic
+
+  margin under baseline: median 0.300, mean 63.439, max 9996.000
+
+  margin bucket     n (pos x variant)   ranking change
+  tie (<=1e-9)                    355             8.2%
+  0-0.5                            90            23.3%
+  0.5-1.5                         115            14.8%
+  1.5+                            240             5.8%

@@ -1,0 +1,10 @@
+does the whole evaluator still prefer shedding? (7180 transitions)
+
+  moves playing a trump      n=1640   full evaluation fell in  37.1%   mean total delta +0.1980
+  moves playing a non-trump  n=5540   full evaluation fell in  38.2%   mean total delta +0.3270
+
+  same split, restricted to E2's own obligation defect being
+  absent (defender moves only, where the obligation term is
+  correctly signed even before repair):
+  trump, defender            n=858    full evaluation fell in  16.8%   mean total delta +0.6258
+  non-trump, defender        n=790    full evaluation fell in   0.0%   mean total delta +1.0451

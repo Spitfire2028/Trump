@@ -1,0 +1,17 @@
+inertness diagnosis: 2570 non-terminal leaves from 120 positions at depth 3
+
+  V3_strong_trump        leaves changed:  1615 ( 62.8%)
+  V4_strong_obligation   leaves changed:   360 ( 14.0%)
+  obligation applicable  leaves         :   360 ( 14.0%)
+
+  root values moved but the pick did not (depth 3):
+    V3_strong_trump        values moved in   90 of 120 positions; pick unchanged in   75
+    V4_strong_obligation   values moved in   56 of 120 positions; pick unchanged in   56
+
+  within-position spread of the per-move value delta (0 => common offset, cannot reorder):
+    V3_strong_trump        n=  90  mean spread   2.419  pure offset in   12 of 90
+    V4_strong_obligation   n=  56  mean spread   2.379  pure offset in    0 of 56
+
+  does the perturbation favour the move the baseline already chose?
+    V3_strong_trump        baseline's pick got the largest delta in   50 of   90 (55.6%)
+    V4_strong_obligation   baseline's pick got the largest delta in   56 of   56 (100.0%)

@@ -1,0 +1,51 @@
+== deterministic budget=1   (2400 pairs)
+  cell              n  baseline score            95% CI       p  candidate score
+  lad_e3_none     400           0.946 [ 0.929, 0.961]   0.000            0.054
+  lad_e3_ti       400           0.939 [ 0.922, 0.955]   0.000            0.061
+  lad_e3_ob       400           0.465 [ 0.432, 0.497]   0.034            0.535
+  lad_e3_both     400           0.470 [ 0.436, 0.503]   0.079            0.530
+  lad_e2_none     400           0.651 [ 0.619, 0.682]   0.000            0.349
+  lad_e2_ob       400           0.492 [ 0.463, 0.524]   0.627            0.508
+
+  isolated factor effects (change in CANDIDATE score):
+    throw-in repair, no obligation repair      +0.006   below threshold
+    throw-in repair, with obligation repair    -0.005   below threshold
+    obligation repair, no throw-in repair      +0.481   MEANINGFUL
+    obligation repair, with throw-in repair    +0.469   MEANINGFUL
+    base E2 -> E3, both unrepaired             -0.294   MEANINGFUL
+    base E2 -> E3, obligation repaired         +0.027   below threshold
+
+== deterministic budget=3   (2400 pairs)
+  cell              n  baseline score            95% CI       p  candidate score
+  lad_e3_none     400           0.538 [ 0.509, 0.568]   0.015            0.462
+  lad_e3_ti       400           0.535 [ 0.506, 0.564]   0.023            0.465
+  lad_e3_ob       400           0.473 [ 0.441, 0.504]   0.089            0.527
+  lad_e3_both     400           0.473 [ 0.441, 0.504]   0.089            0.527
+  lad_e2_none     400           0.493 [ 0.463, 0.525]   0.651            0.507
+  lad_e2_ob       400           0.477 [ 0.446, 0.509]   0.149            0.523
+
+  isolated factor effects (change in CANDIDATE score):
+    throw-in repair, no obligation repair      +0.003   below threshold
+    throw-in repair, with obligation repair    +0.000   below threshold
+    obligation repair, no throw-in repair      +0.065   MEANINGFUL
+    obligation repair, with throw-in repair    +0.062   MEANINGFUL
+    base E2 -> E3, both unrepaired             -0.045   below threshold
+    base E2 -> E3, obligation repaired         +0.004   below threshold
+
+== deterministic budget=5   (2400 pairs)
+  cell              n  baseline score            95% CI       p  candidate score
+  lad_e3_none     400           0.515 [ 0.491, 0.539]   0.238            0.485
+  lad_e3_ti       400           0.515 [ 0.491, 0.539]   0.238            0.485
+  lad_e3_ob       400           0.509 [ 0.486, 0.531]   0.452            0.491
+  lad_e3_both     400           0.509 [ 0.486, 0.531]   0.452            0.491
+  lad_e2_none     400           0.512 [ 0.489, 0.535]   0.319            0.488
+  lad_e2_ob       400           0.507 [ 0.484, 0.529]   0.557            0.493
+
+  isolated factor effects (change in CANDIDATE score):
+    throw-in repair, no obligation repair      +0.000   below threshold
+    throw-in repair, with obligation repair    +0.000   below threshold
+    obligation repair, no throw-in repair      +0.006   below threshold
+    obligation repair, with throw-in repair    +0.006   below threshold
+    base E2 -> E3, both unrepaired             -0.003   below threshold
+    base E2 -> E3, obligation repaired         -0.002   below threshold
+

@@ -1,0 +1,58 @@
+seeds 100..124: 7014 reachable legal shedding transitions
+
+  zero M1 delta          2993 (42.7%)
+  mean delta            +0.5733
+  median delta          +1.0000
+
+  by seat
+    attacker         n=5459   flat  47.6%   mean delta +0.5243
+    defender         n=1555   flat  25.5%   mean delta +0.7453
+
+  by card played
+    non-trump        n=5468   flat  43.0%   mean delta +0.5704
+    trump            n=1546   flat  41.7%   mean delta +0.5834
+
+  by own hand size before
+    1                n=26     flat   0.0%   mean delta +1.0000
+    10               n=413    flat   0.0%   mean delta +1.0000
+    11               n=297    flat   0.0%   mean delta +1.0000
+    12               n=146    flat   0.0%   mean delta +1.0000
+    13               n=100    flat   0.0%   mean delta +1.0000
+    14               n=55     flat   0.0%   mean delta +1.0000
+    15               n=23     flat   0.0%   mean delta +1.0000
+    16               n=8      flat   0.0%   mean delta +1.0000
+    18               n=2      flat   0.0%   mean delta +1.0000
+    19               n=19     flat   0.0%   mean delta +1.0000
+    2                n=68     flat   0.0%   mean delta +1.0000
+    20               n=3      flat   0.0%   mean delta +1.0000
+    3                n=135    flat   4.4%   mean delta +0.9556
+    4                n=233    flat  23.6%   mean delta +0.7639
+    5                n=551    flat  56.8%   mean delta +0.4319
+    6                n=2893   flat  90.5%   mean delta +0.0947
+    7                n=798    flat   0.0%   mean delta +1.0000
+    8                n=670    flat   0.0%   mean delta +1.0000
+    9                n=574    flat   0.0%   mean delta +1.0000
+
+  by attack size
+    0                n=4731   flat  46.7%   mean delta +0.5333
+    1                n=1878   flat  33.4%   mean delta +0.6656
+    2                n=341    flat  39.9%   mean delta +0.6012
+    3                n=59     flat  33.9%   mean delta +0.6610
+    4                n=4      flat  25.0%   mean delta +0.7500
+    5                n=1      flat   0.0%   mean delta +1.0000
+
+  by attack limit
+    1                n=64     flat   0.0%   mean delta +1.0000
+    2                n=162    flat   0.0%   mean delta +1.0000
+    3                n=187    flat   0.0%   mean delta +1.0000
+    4                n=187    flat   0.0%   mean delta +1.0000
+    5                n=264    flat   0.0%   mean delta +1.0000
+    6                n=6150   flat  48.7%   mean delta +0.5133
+
+  by refill_to
+    6                n=7014   flat  42.7%   mean delta +0.5733
+
+  by talon
+    1-5              n=1261   flat  45.4%   mean delta +0.5456
+    6+               n=3975   flat  60.9%   mean delta +0.3912
+    empty            n=1778   flat   0.0%   mean delta +1.0000

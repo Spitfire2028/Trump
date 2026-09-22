@@ -1,0 +1,20 @@
+refill_to provenance
+
+  value                6
+  source               SearchNode.refill_to <- state.rules.hand_size
+  set at               ai/determinized.py, evaluation_node()
+  state-dependent?     no -- a RuleSet constant, fixed for the whole game
+  changes after moves? no
+  rule or heuristic?   a game-rule quantity
+
+  distinct refill_to values observed in play: [6]
+  so the flat region is induced by a constant, and its width is
+  fixed rather than adapting to how much talon is actually left.
+
+  what the frozen rule actually does, by talon size:
+    talon  0, attacker needs 4: draws 0, still short by 4
+    talon  1, attacker needs 4: draws 1, still short by 3
+    talon  2, attacker needs 4: draws 2, still short by 2
+    talon  3, attacker needs 4: draws 3, still short by 1
+    talon  6, attacker needs 4: draws 4, still short by 0
+    talon 12, attacker needs 4: draws 4, still short by 0

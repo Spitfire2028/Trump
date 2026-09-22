@@ -1,0 +1,9 @@
+[split=dev, n=500]
+
+evaluator latency: 200 distinct nodes, 5 repetitions each
+
+  evaluator           calls/sec   mean us    p95 us  vs baseline
+  baseline              778,874      1.17      1.58        1.00x
+  mechanistic           681,305      1.36      1.75        1.14x
+  structural            482,750      1.96      2.62        1.61x
+  flexible              237,290      4.11      7.49        3.28x

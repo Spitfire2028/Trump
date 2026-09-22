@@ -1,0 +1,231 @@
+[split=dev, n=500]
+
+20 features formalized (2 control)
+
+  material_raw
+    definition   opponent_cards - own_cards
+    inputs       SearchNode.opponent_cards, .hand, .unknown_own
+    information  PUBLIC + OWN_PRIVATE
+    range        [-36, 36]
+    normalized   none; natural card units
+    sign         positive is better for searcher
+    symmetry     antisymmetric under seat swap in a fully known position
+    cost         O(1)
+    pathology    ignores refill: a deficit may be transient
+
+  material_persistent
+    definition   talon>0: max(0,opp-refill) - max(0,own-refill); else raw
+    inputs       SearchNode.opponent_cards, .own_cards, .talon_size, .refill_to
+    information  PUBLIC + OWN_PRIVATE
+    range        [-36, 36]
+    normalized   none; card units
+    sign         positive is better
+    symmetry     antisymmetric
+    cost         O(1)
+    pathology    discontinuous at talon exhaustion -- by rule, not by choice
+
+  own_hand_size
+    definition   len(hand) + unknown_own
+    inputs       SearchNode.hand, .unknown_own
+    information  OWN_PRIVATE
+    range        [0, 36]
+    normalized   none
+    sign         negative is better (shedding wins)
+    symmetry     not antisymmetric alone
+    cost         O(1)
+    pathology    redundant with material_raw by construction
+
+  trump_count
+    definition   |{c in hand : c.suit == trump}|
+    inputs       SearchNode.hand, .trump
+    information  OWN_PRIVATE + PUBLIC
+    range        [0, 9]
+    normalized   none
+    sign         positive
+    symmetry     not antisymmetric (own-only)
+    cost         O(hand)
+    pathology    a six of trumps counts as much as the ace
+
+  trump_quality
+    definition   sum((rank-6)/8) over own trumps
+    inputs       SearchNode.hand, .trump
+    information  OWN_PRIVATE + PUBLIC
+    range        [0, 9]
+    normalized   rank normalised to [0,1] per card
+    sign         positive
+    symmetry     not antisymmetric (own-only)
+    cost         O(hand)
+    pathology    still blind to which trumps the opponent holds
+
+  trump_control
+    definition   trump_count / own_cards
+    inputs       SearchNode.hand, .trump, .own_cards
+    information  OWN_PRIVATE + PUBLIC
+    range        [0, 1]
+    normalized   divided by hand size
+    sign         positive
+    symmetry     not antisymmetric
+    cost         O(hand)
+    pathology    undefined at an empty hand; defined to 0
+
+  distinct_ranks
+    definition   |{c.rank : c in hand}|
+    inputs       SearchNode.hand
+    information  OWN_PRIVATE
+    range        [0, 9]
+    normalized   none
+    sign         positive
+    symmetry     not antisymmetric
+    cost         O(hand)
+    pathology    counts breadth, not strength
+
+  throw_in_options
+    definition   |{c in hand : c.rank in known_ranks}|
+    inputs       SearchNode.hand, .known_ranks
+    information  OWN_PRIVATE + PUBLIC
+    range        [0, 36]
+    normalized   none
+    sign         positive when attacking
+    symmetry     not antisymmetric
+    cost         O(hand)
+    pathology    reads 0 at an empty table, where it is meaningless
+
+  attack_room
+    definition   max(0, attack_limit - |table|)
+    inputs       SearchNode.attack_limit, .table
+    information  PUBLIC
+    range        [0, 6]
+    normalized   none
+    sign         sign depends on seat
+    symmetry     not antisymmetric
+    cost         O(1)
+    pathology    a bout-structure quantity, not a hand quantity
+
+  defense_flexibility
+    definition   |{c in hand : c beats every open attack}|
+    inputs       SearchNode.hand, .table, .trump
+    information  OWN_PRIVATE + PUBLIC
+    range        [0, 36]
+    normalized   none
+    sign         positive when defending
+    symmetry     not antisymmetric
+    cost         O(hand x table)
+    pathology    0 when nothing is open, which is not the same as 'cannot defend'
+
+  defense_breadth
+    definition   |{c in hand : trump or rank > min(known_ranks)}|
+    inputs       SearchNode.hand, .known_ranks, .trump
+    information  OWN_PRIVATE + PUBLIC
+    range        [0, 36]
+    normalized   none
+    sign         positive
+    symmetry     not antisymmetric
+    cost         O(hand)
+    pathology    approximate: uses ranks on the table, not suits
+
+  open_obligation
+    definition   |{slot in table : not defended}|
+    inputs       SearchNode.table
+    information  PUBLIC
+    range        [0, 6]
+    normalized   none
+    sign         negative when the searcher must answer
+    symmetry     not antisymmetric
+    cost         O(table)
+    pathology    ungated: counts slots that are not the searcher's problem
+
+  obligation_pressure
+    definition   open_obligation / own_cards
+    inputs       SearchNode.table, .own_cards
+    information  PUBLIC + OWN_PRIVATE
+    range        [0, 6]
+    normalized   divided by hand size
+    sign         negative
+    symmetry     not antisymmetric
+    cost         O(table)
+    pathology    explodes as the hand empties; 0 at an empty hand
+
+  seat
+    definition   +1 attacker, -1 defender
+    inputs       SearchNode.searcher_is_attacker
+    information  PUBLIC
+    range        {-1, +1}
+    normalized   none
+    sign         unknown a priori -- to be measured
+    symmetry     antisymmetric by construction
+    cost         O(1)
+    pathology    constant across a bout; cannot separate moves within one
+
+  talon_size
+    definition   len(talon)
+    inputs       SearchNode.talon_size
+    information  PUBLIC
+    range        [0, 24]
+    normalized   none
+    sign         no independent sign
+    symmetry     symmetric (shared)
+    cost         O(1)
+    pathology    identical for both players, so it can only act as a gate on other terms
+
+  refill_deficit
+    definition   min(max(0, refill_to - own), talon_size)
+    inputs       SearchNode.own_cards, .refill_to, .talon_size
+    information  PUBLIC + OWN_PRIVATE
+    range        [0, 6]
+    normalized   none
+    sign         positive (cards are coming)
+    symmetry     not antisymmetric
+    cost         O(1)
+    pathology    assumes the searcher draws, which the rules only grant at bout resolution
+
+  talon_exhaustion
+    definition   max(0, 1 - talon_size/24)
+    inputs       SearchNode.talon_size
+    information  PUBLIC
+    range        [0, 1]
+    normalized   divided by the initial talon
+    sign         no independent sign
+    symmetry     symmetric (shared)
+    cost         O(1)
+    pathology    the 24 is the deal-time talon, not a tuned constant
+
+  terminal_proximity
+    definition   talon==0: 1/(1+opp) - 1/(1+own); else 0
+    inputs       SearchNode.opponent_cards, .own_cards, .talon_size
+    information  PUBLIC + OWN_PRIVATE
+    range        [-1, 1]
+    normalized   reciprocal
+    sign         positive is better
+    symmetry     antisymmetric
+    cost         O(1)
+    pathology    must not shadow terminal scoring; bounded well inside MATE_MARGIN
+
+  control_constant
+    definition   0 -- CONTROL: picks the first legal move via the tie-break
+    inputs       none
+    information  n/a
+    range        {0}
+    normalized   n/a
+    sign         n/a
+    symmetry     n/a
+    cost         O(1)
+    pathology    the floor every other single-feature score must be read against
+
+  turn_gated_moves
+    definition   len(self_moves()) -- CONTROL, not a candidate
+    inputs       SearchNode.self_moves
+    information  OWN_PRIVATE + PUBLIC
+    range        [0, ~20]
+    normalized   none
+    sign         n/a
+    symmetry     n/a
+    cost         O(hand x table)
+    pathology    reads 0 whenever it is not the searcher's turn -- the trap this control exists to expose
+
+  information classes present:
+    OWN_PRIVATE              2
+    OWN_PRIVATE + PUBLIC     7
+    PUBLIC                   5
+    PUBLIC + OWN_PRIVATE     5
+    n/a                      1
+    HIDDEN_WORLD_ONLY        0   (unconstructible from SearchNode)

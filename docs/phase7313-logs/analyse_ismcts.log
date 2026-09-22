@@ -1,0 +1,13 @@
+== ismcts budget=50   (160 pairs)
+  cell              n  baseline score            95% CI       p  candidate score
+  lad_e3_none      40           0.631 [ 0.525, 0.738]   0.021            0.369
+  lad_e3_ti        40           0.619 [ 0.512, 0.725]   0.037            0.381
+  lad_e3_ob        40           0.525 [ 0.425, 0.625]   0.722            0.475
+  lad_e3_both      40           0.512 [ 0.412, 0.625]   0.909            0.488
+
+  isolated factor effects (change in CANDIDATE score):
+    throw-in repair, no obligation repair      +0.012   below threshold
+    throw-in repair, with obligation repair    +0.013   below threshold
+    obligation repair, no throw-in repair      +0.106   MEANINGFUL
+    obligation repair, with throw-in repair    +0.106   MEANINGFUL
+

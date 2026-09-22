@@ -1,0 +1,14 @@
+M1's transience claim, tested on 584 reachable positions where
+a player was below refill_to with a non-empty talon (seeds 0..24)
+
+  deficit later restored to refill_to      569 (97.4%)
+  deficit NEVER restored                    15 (2.6%)
+  mean unrestored deficit                 2.07 cards
+
+  by talon size at the time of the deficit:
+    talon 1-5    n=122    restored  87.7%
+    talon 6+     n=462    restored 100.0%
+
+  M1 treats every one of these as transient. Where the deficit
+  was never restored, the flatness priced a real, permanent
+  difference at zero.

@@ -1,0 +1,38 @@
+decomposition over 7180 reachable shedding transitions
+  (1473 with a negative trump_quality delta)
+
+  by seat
+    attacker           n=5532   negative  12.6%   mean weighted delta -0.0494
+    defender           n=1648   negative  47.0%   mean weighted delta -0.1882
+
+  by phase
+    ATTACK             n=5192   negative  12.6%   mean weighted delta -0.0486
+    DEFENSE            n=1648   negative  47.0%   mean weighted delta -0.1882
+    TAKING             n=340    negative  13.8%   mean weighted delta -0.0614
+
+  by trump played
+    non-trump          n=5540   negative   0.0%   mean weighted delta +0.0000
+    trump              n=1640   negative  89.8%   mean weighted delta -0.3557
+
+  by last card of that trump rank
+    last of rank       n=1640   negative  89.8%   mean weighted delta -0.3557
+    other              n=5540   negative   0.0%   mean weighted delta +0.0000
+
+  by hand size
+    4-6                n=3537   negative  20.8%   mean weighted delta -0.0809
+    7+                 n=3420   negative  20.6%   mean weighted delta -0.0833
+    <=3                n=223    negative  15.2%   mean weighted delta -0.0553
+
+  by open attacks
+    0                  n=5192   negative  12.6%   mean weighted delta -0.0486
+    1                  n=1925   negative  42.4%   mean weighted delta -0.1705
+    2                  n=56     negative   8.9%   mean weighted delta -0.0508
+    3                  n=7      negative   0.0%   mean weighted delta +0.0000
+
+  by talon
+    empty              n=1609   negative  16.2%   mean weighted delta -0.0588
+    non-empty          n=5571   negative  21.8%   mean weighted delta -0.0877
+
+  rank of the trump played, where one was:
+    n=1640  mean normalised rank 0.516  min 0.000  max 1.000
+    the delta is exactly minus that rank in 1640 of 1640 cases

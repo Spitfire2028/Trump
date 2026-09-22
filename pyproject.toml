@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "durakfish"
+version = "0.1.0"
+description = "A strong imperfect-information game engine for Podkidnoy Durak"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = ["durak", "game-ai", "mcts", "ismcts", "imperfect-information"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Games/Entertainment :: Board Games",
+]
+
+# The core engine has ZERO runtime dependencies. This is deliberate:
+# it keeps self-play portable and makes the engine embeddable anywhere.
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "hypothesis>=6.100", "mypy>=1.10", "ruff>=0.5"]
+science = ["numpy>=1.26"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/durakfish"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["src/durakfish"]

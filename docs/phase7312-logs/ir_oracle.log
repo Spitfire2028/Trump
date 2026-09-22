@@ -1,0 +1,13 @@
+exact-reference check: 12 solvable positions, depth 3
+
+  evaluator        oracle-optimal   mean regret
+  baseline                  91.7%         0.167
+  flexible                  91.7%         0.167
+  flex_r1                   91.7%         0.167
+  flex_r2                   91.7%         0.167
+  flex_r3                   91.7%         0.167
+  flex_r4                   91.7%         0.167
+
+  Coverage is a small, structurally atypical slice. This cannot
+  rank the candidates and is not used to.
+DONE

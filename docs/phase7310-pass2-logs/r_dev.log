@@ -1,0 +1,9 @@
+[split=dev, n=500]
+
+action-ranking against the exact solver: 71 solvable positions, depth 3
+
+  evaluator         top-1    top-2   mean loss  worst regret  Kendall tau
+  baseline          93.0%    98.6%       0.127         2.000        0.232
+  mechanistic       93.0%    98.6%       0.127         2.000        0.232
+  structural        93.0%    98.6%       0.127         2.000        0.230
+  flexible          94.4%   100.0%       0.099         2.000        0.234

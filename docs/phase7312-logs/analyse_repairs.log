@@ -1,0 +1,26 @@
+analysis over 6000 recorded pairs (12000 games)
+
+== deterministic budget=1  (2000 pairs)
+  pair                            n   score            95% CI       p   P0 wr   P1 wr   draws        verdict
+  baseline vs flex_r1           400   0.939 [ 0.922, 0.955]   0.000   0.944   0.935   0.011     MEANINGFUL
+  baseline vs flex_r2           400   0.492 [ 0.463, 0.524]   0.627   0.492   0.492   0.052     equivalent
+  baseline vs flex_r3           400   0.470 [ 0.436, 0.503]   0.079   0.466   0.474   0.045     equivalent
+  baseline vs flex_r4           400   0.846 [ 0.821, 0.869]   0.000   0.849   0.843   0.014     MEANINGFUL
+  baseline vs flexible          400   0.946 [ 0.929, 0.961]   0.000   0.949   0.943   0.016     MEANINGFUL
+
+== deterministic budget=3  (2000 pairs)
+  pair                            n   score            95% CI       p   P0 wr   P1 wr   draws        verdict
+  baseline vs flex_r1           400   0.535 [ 0.506, 0.564]   0.023   0.526   0.544   0.195          small
+  baseline vs flex_r2           400   0.477 [ 0.446, 0.509]   0.149   0.486   0.468   0.184     equivalent
+  baseline vs flex_r3           400   0.473 [ 0.441, 0.504]   0.089   0.487   0.459   0.184     equivalent
+  baseline vs flex_r4           400   0.526 [ 0.495, 0.557]   0.100   0.521   0.531   0.163     equivalent
+  baseline vs flexible          400   0.538 [ 0.509, 0.568]   0.015   0.527   0.549   0.194          small
+
+== deterministic budget=5  (2000 pairs)
+  pair                            n   score            95% CI       p   P0 wr   P1 wr   draws        verdict
+  baseline vs flex_r1           400   0.515 [ 0.491, 0.539]   0.238   0.517   0.512   0.280     equivalent
+  baseline vs flex_r2           400   0.507 [ 0.484, 0.529]   0.557   0.504   0.510   0.291     equivalent
+  baseline vs flex_r3           400   0.509 [ 0.486, 0.531]   0.452   0.502   0.515   0.287     equivalent
+  baseline vs flex_r4           400   0.506 [ 0.481, 0.530]   0.624   0.506   0.506   0.280     equivalent
+  baseline vs flexible          400   0.515 [ 0.491, 0.539]   0.238   0.517   0.512   0.280     equivalent
+

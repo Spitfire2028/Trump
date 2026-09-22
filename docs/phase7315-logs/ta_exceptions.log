@@ -1,0 +1,23 @@
+talon-short exceptions, fresh seeds 200..224: 17 cases
+
+   seed seat       hand   opp  talon  needs  shortfall
+    201 attacker      5     7      1      1          0
+    201 attacker      4     7      1      2          1
+    203 attacker      5    10      1      1          0
+    203 attacker      4    10      1      2          1
+    207 attacker      5    11      1      1          0
+    207 attacker      4    11      1      2          1
+    218 attacker      5    11      2      1          0
+    218 attacker      4    11      2      2          0
+    218 attacker      3    11      2      3          1
+    219 attacker      5     7      1      1          0
+    219 attacker      4     7      1      2          1
+    220 attacker      5    10      1      1          0
+    220 attacker      4     9      1      2          1
+    224 defender      5     5      1      1          0
+    224 attacker      5     4      1      1          0
+    224 defender      4     4      1      2          1
+    224 attacker      4     3      1      2          1
+
+  mean unrecovered deficit  1.59 cards
+  attacker / defender       15 / 2

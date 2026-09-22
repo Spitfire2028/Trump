@@ -1,0 +1,14 @@
+[split=dev, n=500]
+
+root-decision difference vs baseline: 140 positions
+
+  depth    mechanistic     structural       flexible
+      0          17.9%          31.4%          47.1%
+      1          17.9%          31.4%          47.1%
+      2          12.9%          20.7%          30.7%
+      3          14.3%          16.4%          18.6%
+      4           7.1%          19.3%          16.4%
+      5           7.1%           9.3%          11.4%
+
+  Depth 0 scores the root position itself, so it isolates the
+  evaluator with no search at all.

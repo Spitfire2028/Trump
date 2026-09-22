@@ -1,0 +1,28 @@
+[split=dev, n=500]
+
+single-feature agreement with the exact solver: 66 solvable positions
+
+  throw_in_options         89.4%
+  material_raw             83.3%
+  material_persistent      83.3%
+  trump_count              83.3%
+  trump_quality            83.3%
+  trump_control            83.3%
+  seat                     83.3%
+  talon_size               83.3%
+  refill_deficit           83.3%
+  talon_exhaustion         83.3%
+  control_constant         83.3%
+  turn_gated_moves         83.3%
+  distinct_ranks           80.3%
+  attack_room              80.3%
+  defense_flexibility      78.8%
+  defense_breadth          75.8%
+  open_obligation          74.2%
+  obligation_pressure      74.2%
+  own_hand_size            68.2%
+  terminal_proximity       68.2%
+
+  Phase 7.3.8/7.3.10 established that this domain is almost
+  entirely empty-talon positions, so these numbers are a sanity
+  check on sign and sanity, not a feature ranking.

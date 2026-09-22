@@ -1,0 +1,15 @@
+component            exact formula / value
+------------------------------------------------------------------------------
+M1 material          if node.talon_size == 0: return float(node.opponent_cards - node.own_cards) refill = node.refill_to own_surplus = max(0, node.own_cards - refill) opponent_surplus = max(0, node.opponent_cards - refill) return float(opponent_surplus - own_surplus)
+
+weight               material = 1.0
+gate                 talon_size == 0 selects the raw branch
+normalisation        none; card units throughout
+reference quantity   node.refill_to
+refill_to (declared) refill_to: the hand size players draw back up to. Rules config.
+refill_to (value)    rules.hand_size = 6  -- a rules constant, not an evaluator heuristic
+
+consumers            MechanisticEvaluator.evaluate, and every
+                     subclass: Structural, Flexible, R1-R4
+intended meaning     material that survives the refill; a deficit
+                     below refill_to is asserted to be transient

@@ -1,0 +1,10 @@
+predictive accuracy against the real post-refill difference
+  1958 reachable positions followed to an actual refill, seeds 0..24
+
+  model               mean |error|    median   exact hits
+  A_current                 2.2002      1.00        18.3%
+  B_talon                   2.1931      1.00        18.4%
+  C_attacker_first          2.1931      1.00        18.4%
+
+  Lower mean error means the model better represents the
+  quantity M1 claims to estimate. This is the semantic test.

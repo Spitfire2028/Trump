@@ -1,0 +1,25 @@
+ladder cells, and the single method each overrides
+
+  cell           base chain                                     differs by
+  lad_e3_none    FlexibleEvaluator <- StructuralEvaluator <- MechanisticEvaluator ['_throw_in_options']
+  lad_e3_ti      RepairedThrowInEvaluator <- FlexibleEvaluator <- StructuralEvaluator <- MechanisticEvaluator ['_throw_in_options']
+  lad_e3_ob      LadderE3Obligation <- FlexibleEvaluator <- StructuralEvaluator <- MechanisticEvaluator ['_obligation_pressure']
+  lad_e3_both    RepairedEvaluator <- RepairedThrowInEvaluator <- FlexibleEvaluator <- StructuralEvaluator ['_obligation_pressure']
+  lad_e2_none    StructuralEvaluator <- MechanisticEvaluator    ['_obligation_pressure']
+  lad_e2_ob      RepairedObligationEvaluator <- StructuralEvaluator <- MechanisticEvaluator ['_obligation_pressure']
+
+  resolved obligation formula per cell:
+    lad_e3_none    from StructuralEvaluator          if not node.own_cards: return 0.0 open_attacks = sum(1 for slot in nod
+    lad_e3_ti      from StructuralEvaluator          if not node.own_cards: return 0.0 open_attacks = sum(1 for slot in nod
+    lad_e3_ob      from LadderE3Obligation           if node.searcher_is_attacker: return 0.0 return float(sum(1 for slot i
+    lad_e3_both    from RepairedEvaluator            if node.searcher_is_attacker: return 0.0 return float(sum(1 for slot i
+    lad_e2_none    from StructuralEvaluator          if not node.own_cards: return 0.0 open_attacks = sum(1 for slot in nod
+    lad_e2_ob      from RepairedObligationEvaluator  if node.searcher_is_attacker: return 0.0 return float(sum(1 for slot i
+
+  resolved throw-in formula per cell:
+    lad_e3_none    from FlexibleEvaluator
+    lad_e3_ti      from RepairedThrowInEvaluator
+    lad_e3_ob      from FlexibleEvaluator
+    lad_e3_both    from RepairedThrowInEvaluator
+    lad_e2_none    (no throw-in term -- E2 line)
+    lad_e2_ob      (no throw-in term -- E2 line)

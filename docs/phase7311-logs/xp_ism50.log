@@ -1,0 +1,7 @@
+  done 50it baseline vs baseline (617s)
+  done 50it baseline vs mechanistic (1187s)
+  done 50it baseline vs structural (1772s)
+  done 50it baseline vs flexible (2353s)
+
+240 pairs -> benchmarks/data/crossplay_ismcts_50.json
+ISMDONE

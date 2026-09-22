@@ -1,0 +1,12 @@
+gate analysis over 7180 reachable shedding transitions
+
+  no gate (current)        applies to   7180 (100.0%)   negative  20.5%   mean -0.0813
+  defender only            applies to   1648 ( 23.0%)   negative  47.0%   mean -0.1882
+  attacker only            applies to   5532 ( 77.0%)   negative  12.6%   mean -0.0494
+  DEFENSE phase only       applies to   1648 ( 23.0%)   negative  47.0%   mean -0.1882
+  talon non-empty only     applies to   5571 ( 77.6%)   negative  21.8%   mean -0.0877
+  talon empty only         applies to   1609 ( 22.4%)   negative  16.2%   mean -0.0588
+
+  A gate helps only if the pathology concentrates in the
+  positions it excludes. If every subset looks the same, the
+  feature is not mis-gated and a gate would only hide it.

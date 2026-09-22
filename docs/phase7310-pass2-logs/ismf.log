@@ -1,0 +1,16 @@
+[split=dev, n=500]
+
+ISMCTS family comparison: 30 positions, common random numbers
+
+   iters evaluator       differs vs base   TVD mean   TVD p95  mean top Q
+      50 baseline                   0.0%      0.000     0.000      341.17
+      50 mechanistic               30.0%      0.158     0.380      340.78
+      50 structural                40.0%      0.225     0.540      223.62
+      50 flexible                  33.3%      0.207     0.540      223.80
+
+     200 baseline                   0.0%      0.000     0.000      689.03
+     200 mechanistic               16.7%      0.211     0.615      688.61
+     200 structural                26.7%      0.265     0.770      665.10
+     200 flexible                  36.7%      0.278     0.860      665.24
+
+DONE

@@ -1,0 +1,12 @@
+feature matrix over 5666 reachable shedding transitions
+
+  feature               mean raw d  mean weighted     d<0    d==0
+  material (M1)            +0.5898        +0.5898    0.0%   41.0%
+  trump_quality            -0.1230        -0.0849   20.9%   79.1%
+  obligation               +0.1220        -0.2416   22.8%    0.4%
+  terminal_proximity       +0.0093        +0.0232    0.0%   77.4%
+  TOTAL evaluator          +0.2866                  38.3%
+
+  conditional on M1 being flat vs moving:
+    M1 flat    n=2324   total evaluation fell in  89.8%   mean -0.3979
+    M1 moves   n=3342   total evaluation fell in   2.5%   mean +0.7626

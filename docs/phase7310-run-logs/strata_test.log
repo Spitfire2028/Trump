@@ -1,0 +1,26 @@
+[split=test, n=500]
+
+stratified decision difference (depth 3): 180 positions
+
+  by moves
+    2-3            n=85    differs   4.7%
+    4-6            n=82    differs  34.1%
+    7+             n=13    differs  15.4%   (n<30)
+
+  by phase
+    early          n=34    differs  55.9%
+    late           n=46    differs   0.0%
+    mid            n=100   differs  15.0%
+
+  by seat
+    attacker       n=98    differs  28.6%
+    defender       n=82    differs   7.3%
+
+  by surplus
+    at/under       n=105   differs  25.7%
+    over refill    n=75    differs   9.3%
+
+  by talon
+    1-6            n=31    differs  25.8%
+    7+             n=103   differs  25.2%
+    empty          n=46    differs   0.0%

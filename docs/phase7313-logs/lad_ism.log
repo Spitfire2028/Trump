@@ -1,0 +1,7 @@
+  done 50it baseline vs lad_e3_none (265s)
+  done 50it baseline vs lad_e3_ti (523s)
+  done 50it baseline vs lad_e3_ob (803s)
+  done 50it baseline vs lad_e3_both (1069s)
+
+160 pairs -> benchmarks/data/ladder_ismcts_50.json
+DONE

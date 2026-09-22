@@ -1,0 +1,9 @@
+ladder pilot: paired variance, deterministic depth 1
+
+  cell              n  baseline score      sd  pairs for 5pp
+  lad_e3_none      40           0.956   0.124             48
+  lad_e3_ti        40           0.938   0.175             96
+  lad_e3_ob        40           0.400   0.320            322
+  lad_e3_both      40           0.469   0.307            297
+  lad_e2_none      40           0.631   0.321            324
+  lad_e2_ob        40           0.431   0.296            275

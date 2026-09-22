@@ -1,0 +1,25 @@
+[split=dev, n=500]
+
+pairwise |Pearson r| over 500 positions, 19 non-constant features
+
+  strongest relationships:
+    talon_size             talon_exhaustion       r=-1.000  REDUNDANT
+    material_raw           material_persistent    r= 0.981  REDUNDANT
+    trump_count            trump_control          r= 0.869  overlapping
+    trump_count            trump_quality          r= 0.848  overlapping
+    own_hand_size          distinct_ranks         r= 0.833  overlapping
+    material_raw           own_hand_size          r=-0.826  overlapping
+    material_persistent    own_hand_size          r=-0.804  overlapping
+    trump_quality          trump_control          r= 0.739  overlapping
+    material_raw           distinct_ranks         r=-0.693  related
+    open_obligation        obligation_pressure    r= 0.678  related
+    material_persistent    distinct_ranks         r=-0.668  related
+    material_persistent    terminal_proximity     r= 0.632  related
+
+  the specific pairs the phase brief asks about:
+    material_raw           vs own_hand_size          r=-0.826
+    trump_count            vs trump_quality          r= 0.848
+    turn_gated_moves       vs defense_flexibility    r= 0.098
+    talon_size             vs refill_deficit         r= 0.183
+    open_obligation        vs defense_flexibility    r= 0.409
+    material_raw           vs material_persistent    r= 0.981

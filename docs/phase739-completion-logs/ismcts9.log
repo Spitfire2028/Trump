@@ -1,0 +1,19 @@
+ISMCTS: 40 positions, budgets (50, 200, 800), common random numbers (seed fixed per position)
+
+   iters variant          changed    rate  TVD mean  TVD p95  topQ diff
+      50 E1_card_only           4   10.0%     0.077    0.200      0.243
+      50 E2_no_card            26   65.0%     0.387    0.600    257.488
+      50 E3_talon_aware         8   20.0%     0.161    0.460      1.313
+      50 V3_strong_trump       13   32.5%     0.174    0.600      1.087
+      50 V4_strong_obligation        0    0.0%     0.000    0.000      0.000
+     200 E1_card_only           7   17.5%     0.093    0.325      1.481
+     200 E2_no_card            28   70.0%     0.476    0.740    313.419
+     200 E3_talon_aware         8   20.0%     0.137    0.555      6.317
+     200 V3_strong_trump       12   30.0%     0.272    0.860     15.088
+     200 V4_strong_obligation        0    0.0%     0.000    0.000      0.000
+     800 E1_card_only           5   12.5%     0.086    0.384      0.555
+     800 E2_no_card            30   75.0%     0.530    0.840    363.028
+     800 E3_talon_aware         9   22.5%     0.146    0.724     29.954
+     800 V3_strong_trump       17   42.5%     0.325    0.964      4.922
+     800 V4_strong_obligation        0    0.0%     0.000    0.000      0.000
+DONE

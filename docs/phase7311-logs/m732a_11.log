@@ -1,0 +1,51 @@
+mutating a scratch copy; the working tree is never written to
+per-mutation timeout: 90s
+
+  CAUGHT   1. minimax MAX/MIN inversion
+           E                   AssertionError: assert (1.3, AttackM...d=Card('9H'))) == (1.3, Att
+  CAUGHT   2. alpha-beta MAX/MIN inversion
+           E       assert 1 == 0
+  CAUGHT   3. root perspective inversion
+           E       assert 1 == -1
+  CAUGHT   4. terminal check removed from minimax
+           E           AssertionError: 1
+  CAUGHT   5. terminal WIN/LOSS swap
+           E           AssertionError: 0
+  CAUGHT   6. draw mis-scored as a win
+           E       assert 1 == 0
+  CAUGHT   7. minimax depth decrement removed
+           E                   AssertionError: minimax reached ply 6 with a budget of 2
+  CAUGHT   8. alpha-beta depth decrement removed (both branches)
+           E                   AssertionError: alpha_beta reached ply 6 with a budget of 2
+  CAUGHT   9. leaf evaluator removed
+           E                   assert 0.0 == 0.3
+  CAUGHT   10. a legal move skipped at every node
+           E       assert 1 == 0
+  CAUGHT   11. wrong child selection: last tie wins
+           E                   AssertionError: assert (-3.4, Defens...d=Card('JD'))) == (-3.4, De
+  CAUGHT   12. always choose the first root move
+           E       assert 1 == -1
+  CAUGHT   13. alpha bound corrupted at max nodes
+           E                   AssertionError: assert (3.9, Defense...d=Card('7D'))) == (3.6, Def
+  CAUGHT   14. beta bound corrupted at min nodes
+           E                   AssertionError: assert (7.9, AttackM...d=Card('6D'))) == (8.0, Att
+  CAUGHT   16. evaluation node hides the real opponent count
+           E                   AssertionError: assert 6 == 8
+  CAUGHT   17. evaluation node uses the wrong seat's hand
+           E                   AssertionError: wrong seat's hand
+  CAUGHT   18. SearchNode allowed to pre-empt terminal detection
+           E                   AssertionError: assert <NodeKind.BOUT_RESOLVED: 'bout_resolved'> i
+  CAUGHT   19. stale position searched instead of the child
+           E                   AssertionError: assert (1.3, AttackM...d=Card('9H'))) == (1.3, Att
+
+caught 18 of 18   {'CAUGHT': 18}
+
+unreachable: root alpha/beta update removed (was mutation 15)
+  Correctness-preserving, and proven so rather than assumed. Removing the root-level bound updates only forfeits pruning at the root; interior cutoffs still occur. Measured with the mutation applied: 279 comparisons of alpha-beta against full-width minimax gave 0 differences in value or chosen move, and alpha-beta still visited 11,444 nodes against minimax's 17,523. It is a performance regression, not a fault, so no correctness test can or should detect it.
+
+unreachable: cache contamination between worlds
+  No cache exists. Phase 7.3.2a deliberately adds no transposition table, so cross-world contamination is structurally impossible rather than merely untested. The interleaving test covers the property from the other side.
+
+unreachable: reading the real hidden state inside the searcher
+  The searcher's only input is a DeterminizedPosition, which Phase 7.3.1 proved is a pure function of a SearchInformation and a DeterminizedWorld. There is no reference to the real game to mutate into a read, and the noninterference test requires identical results from two different realities.
+A_DONE

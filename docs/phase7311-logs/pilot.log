@@ -1,0 +1,5 @@
+pilot: measuring paired-outcome variance
+
+  mode            budget pair                          n    mean      sd   s/pair  pairs for 5pp
+  deterministic        3 baseline vs flexible         40   0.550   0.281     0.03            248
+  deterministic        3 baseline vs baseline         40   0.500   0.000     0.03              0

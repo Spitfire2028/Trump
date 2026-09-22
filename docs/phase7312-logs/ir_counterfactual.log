@@ -1,0 +1,15 @@
+counterfactual: does playing a card lower the evaluation?
+
+  evaluator       shedding moves   score fell     rate   mean delta
+  baseline                  7180            0     0.0%       1.0462
+  mechanistic               7180          430     6.0%       0.6387
+  structural                7180         2726    38.0%       0.2976
+  flexible                  7180         2734    38.1%       0.2600
+  flex_r1                   7180         2735    38.1%       0.2230
+  flex_r2                   7180          384     5.3%       0.9881
+  flex_r3                   7180          551     7.7%       0.9135
+  flex_r4                   7180         1333    18.6%       0.5370
+
+  'score fell' counts moves after which the evaluator prefers
+  the position before the card was played. A high rate is the
+  hoarding incentive Phase 7.3.11 measured in play.

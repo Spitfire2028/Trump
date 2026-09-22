@@ -1,0 +1,19 @@
+stratified baseline-vs-candidate results (3780 pairs)
+
+  by game length
+    long (70+)     n=914   baseline score  0.678 [ 0.655, 0.700]
+    medium (40-70) n=2866  baseline score  0.539 [ 0.528, 0.550]
+
+  by terminal talon
+    empty          n=3780  baseline score  0.573 [ 0.562, 0.583]
+
+  by mean branching factor
+    low            n=229   baseline score  0.521 [ 0.478, 0.563]
+    medium         n=3551  baseline score  0.576 [ 0.566, 0.587]
+
+  by budget
+    dete-1         n=1200  baseline score  0.711 [ 0.691, 0.729]
+    dete-3         n=1200  baseline score  0.498 [ 0.481, 0.516]
+    dete-5         n=1200  baseline score  0.511 [ 0.498, 0.524]
+    ismc-50        n=180   baseline score  0.561 [ 0.507, 0.614]
+

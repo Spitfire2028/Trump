@@ -1,0 +1,30 @@
+diagnostic performance: 40 positions, one process, wall clock
+
+  depth variant                  seconds     pos/s      nodes  vs baseline
+      1 E0_baseline                 0.01    6299.2        296        1.00x
+      1 E1_card_only                0.01    6624.0        296        0.95x
+      1 E2_no_card                  0.01    6751.2        296        0.93x
+      1 E3_talon_aware              0.01    6491.6        296        0.97x
+      1 V3_strong_trump             0.01    6808.7        296        0.93x
+      1 V4_strong_obligation        0.01    6002.1        296        1.05x
+      1 rec_baseline                0.01    6241.6        296        1.01x
+
+      3 E0_baseline                 0.04     949.5       1507        1.00x
+      3 E1_card_only                0.04     970.2       1493        0.98x
+      3 E2_no_card                  0.04     925.0       1577        1.03x
+      3 E3_talon_aware              0.04     956.3       1508        0.99x
+      3 V3_strong_trump             0.04     916.9       1590        1.04x
+      3 V4_strong_obligation        0.04     961.9       1507        0.99x
+      3 rec_baseline                0.04     928.9       1507        1.02x
+
+      5 E0_baseline                 0.22     181.4       7418        1.00x
+      5 E1_card_only                0.22     183.9       7306        0.99x
+      5 E2_no_card                  0.21     191.2       7093        0.95x
+      5 E3_talon_aware              0.22     185.0       7254        0.98x
+      5 V3_strong_trump             0.21     189.7       7170        0.96x
+      5 V4_strong_obligation        0.23     177.5       7598        1.02x
+      5 rec_baseline                0.23     174.5       7418        1.04x
+
+  rec_baseline is the amplitude recorder. Its node count must
+  equal the baseline's: it records leaves, it does not change
+  which leaves are reached.

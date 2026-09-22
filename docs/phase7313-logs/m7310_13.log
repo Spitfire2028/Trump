@@ -1,0 +1,71 @@
+Phase 7.3.10 mutation audit -- src/durakfish/ai/evaluation.py
+mutating scratch copies; production files are never written to
+41 production sources hashed; timeout 240s
+
+  CAUGHT   M1   [baseline] negate the whole baseline score
+           E               assert 0.3 == -0.3
+  CAUGHT   M2   [baseline] drop the trump term from the baseline
+           E               assert 0.3 == 0.0
+  CAUGHT   M3   [baseline] treat an open obligation as an asset
+           E               assert -1.2 == -0.19999999999999996
+  CAUGHT   M4   [baseline] corrupt the dominant coefficient at its source
+           E           assert 0.09999999999999998 < 0
+  CAUGHT   M5   [baseline] heuristic a proven terminal instead of scoring it exactly
+           E               AssertionError: assert 1.0 == 9999.0
+  CAUGHT   M6   [baseline] score material from the opponent's point of view
+           E               assert -1.2 == 0.8
+  CAUGHT   M7   [baseline] drop the ply discount so a later win ties an immediate one
+           E       AssertionError: assert 10000.0 == (10000.0 - 4)
+  CAUGHT   M8   [candidate] negate the candidate's material term
+           E               assert 2.0 == -2.0
+  CAUGHT   M9   [candidate] collapse the mechanism: always use raw material
+           E                   assert -1.0 == 0.0
+  CAUGHT   M10  [candidate] reverse the obligation penalty in the candidate
+           E               assert -0.19999999999999996 == -1.2
+  CAUGHT   M11  [candidate] ignore the supplied weights and hardcode the defaults
+           E       assert 0.6 != 0.6
+  CAUGHT   M12  [candidate] approximate terminals in the candidate
+           E               AssertionError: assert 500.0 == 10000.0
+  CAUGHT   M13  [candidate] swap own and opponent surplus inputs
+           E               assert 2.0 == -2.0
+  CAUGHT   M14  [registry] the candidate name silently resolves to the baseline
+           E       AssertionError: assert False
+  CAUGHT   M15  [registry] an unknown evaluator name falls back instead of failing
+           E       Failed: DID NOT RAISE DurakFishError
+  CAUGHT   M16  [candidate] leak talon contents into the node and evaluate on them
+           E                   assert 4.0 == 0.0
+  CAUGHT   M18  [structural] reward open obligations instead of penalising them
+           E       assert -0.5483333333333333 < -1.2083333333333333
+  CAUGHT   M19  [structural] drop trump quality, collapsing the ace and the six
+           E       assert 0.0 > 0.0
+  CAUGHT   M20  [structural] break the auxiliary-share rule for one term only
+           E           AssertionError: terminal_proximity is not what the declared rule generates
+  CAUGHT   M21  [structural] invert trump quality so a high trump becomes a liability
+           E       assert -0.69 > 0.0
+  CAUGHT   M22  [structural] reverse terminal proximity's perspective
+           E       assert -0.25 > 0
+  CAUGHT   M23  [structural] let terminal proximity run while the talon still refills
+           E               assert -0.023809523809523808 == 0.0
+  CAUGHT   M24  [flexible] make the flexibility terms inert
+           E       assert -1.8683333333333332 == -0.42833333333333323 ± 4.3e-07
+  CAUGHT   M25  [structural] make the share sweep a no-op, hiding the free parameter
+           E               assert 0.69 == 0.345 ± 3.4e-07
+  CAUGHT   M26  [registry] the flexible name silently resolves to the structural form
+           E       AssertionError: assert <class 'durakfish.ai.evaluation.StructuralEvaluator'> is 
+  CAUGHT   M17  [registry] promote the candidate to the production default
+           E       AssertionError: assert <class 'durakfish.ai.evaluation.MechanisticEvaluator'> is
+
+by mutation family:
+  default change             1/1 caught
+  feature removal            4/4 caught
+  feature sign reversal      3/3 caught
+  hidden-information access  1/1 caught
+  perspective reversal       3/3 caught
+  sign inversion             3/3 caught
+  silent baseline fallback   3/3 caught
+  terminal handling          4/4 caught
+  weight corruption          4/4 caught
+
+production source integrity: INTACT
+caught 26 of 26   {'CAUGHT': 26}
+B

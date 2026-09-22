@@ -1,0 +1,28 @@
+[split=dev, n=500]
+
+feature distributions: n=500 positions (split as loaded), deterministic
+
+  feature                    min     max     mean    stdev   zeros  distinct
+  material_raw            -15.00   12.00    0.030    4.087   13.0%        26
+  material_persistent     -15.00   12.00    0.052    3.748   24.2%        25
+  own_hand_size             0.00   17.00    6.248    2.640    1.2%        18
+  trump_count               0.00    4.00    0.870    0.928   43.0%         5
+  trump_quality             0.00    3.12    0.413    0.542   48.8%        19
+  trump_control             0.00    1.00    0.136    0.159   43.0%        28
+  distinct_ranks            0.00    8.00    4.484    1.528    1.2%         9
+  throw_in_options          0.00    4.00    0.542    0.777   61.2%         5
+  attack_room               0.00    6.00    4.734    1.154    1.0%         7
+  defense_flexibility       0.00    7.00    0.840    1.309   60.6%         8
+  defense_breadth           0.00   14.00    2.752    2.698   30.0%        14
+  open_obligation           0.00    4.00    0.642    0.595   41.2%         5
+  obligation_pressure       0.00    2.00    0.127    0.189   41.8%        26
+  seat                     -1.00    1.00    0.352    0.936    0.0%         2
+  talon_size                0.00   24.00    8.296    7.911   28.6%        25
+  refill_deficit            0.00    4.00    0.276    0.590   78.4%         5
+  talon_exhaustion          0.00    1.00    0.654    0.330    3.8%        25
+  terminal_proximity       -0.94    0.92    0.007    0.150   72.4%        86
+  control_constant          0.00    0.00    0.000    0.000  100.0%         1
+  turn_gated_moves          1.00   14.00    3.130    2.246    0.0%        13
+
+  A feature that is constant, or zero almost everywhere, cannot
+  separate positions however sound its motivation.

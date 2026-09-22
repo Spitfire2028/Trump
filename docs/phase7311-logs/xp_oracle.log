@@ -1,0 +1,8 @@
+exact cross-check on played positions (depth 3)
+
+  evaluator       solved positions   oracle-optimal
+  baseline                      13           100.0%
+  mechanistic                   13            76.9%
+  structural                    13            76.9%
+  flexible                      13            76.9%
+ORACLEDONE

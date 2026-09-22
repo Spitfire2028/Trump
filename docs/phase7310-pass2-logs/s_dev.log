@@ -1,0 +1,12 @@
+[split=dev, n=500]
+
+auxiliary-share sweep: 120 positions, depth 3
+
+  configuration        differs vs baseline   differs vs share 0.10
+  structural_005                     16.7%                    0.0%
+  structural                         16.7%                    0.0%
+  structural_020                     18.3%                    3.3%
+  flexible_005                       20.0%                    0.0%
+  flexible                           20.0%                    0.0%
+  flexible_020                       20.0%                    5.8%
+DEVDONE

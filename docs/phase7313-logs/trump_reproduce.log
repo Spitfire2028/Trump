@@ -1,0 +1,16 @@
+reachable legal shedding transitions: 7180
+
+  trump_quality delta negative in 1473 (20.5%)
+  mean raw delta        -0.1178
+  mean weighted delta   -0.0813   (weight +0.69)
+
+  every negative case, classified:
+    the move actually played a trump        1473 (100.0%)
+    the move played no trump at all            0
+
+  and the converse -- every move that played a trump:
+    moves playing a trump                   1640
+    of those, trump_quality fell            1473 (89.8%)
+
+  Where the two counts agree exactly, the feature is not
+  misfiring: it is reporting that a trump left the hand.

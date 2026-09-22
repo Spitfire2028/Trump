@@ -1,0 +1,41 @@
+analysis over 12000 recorded pairs (24000 games)
+
+== deterministic budget=1  (4000 pairs)
+  pair                            n   score            95% CI       p   P0 wr   P1 wr   draws        verdict
+  baseline vs mechanistic       400   0.535 [ 0.501, 0.568]   0.045   0.524   0.546   0.062          small
+  baseline vs structural        400   0.651 [ 0.619, 0.682]   0.000   0.656   0.646   0.087     MEANINGFUL
+  baseline vs flexible          400   0.946 [ 0.929, 0.961]   0.000   0.949   0.943   0.016     MEANINGFUL
+  mechanistic vs structural     400   0.609 [ 0.579, 0.637]   0.000   0.618   0.600   0.200     MEANINGFUL
+  mechanistic vs flexible       400   0.955 [ 0.942, 0.968]   0.000   0.951   0.959   0.043     MEANINGFUL
+  structural vs flexible        400   0.922 [ 0.906, 0.938]   0.000   0.910   0.935   0.072     MEANINGFUL
+  [control] baseline vs itself  400   0.500 [ 0.500, 0.500]   1.000
+  [control] mechanistic vs itself  400   0.500 [ 0.500, 0.500]   1.000
+  [control] structural vs itself  400   0.500 [ 0.500, 0.500]   1.000
+  [control] flexible vs itself  400   0.500 [ 0.500, 0.500]   1.000
+
+== deterministic budget=3  (4000 pairs)
+  pair                            n   score            95% CI       p   P0 wr   P1 wr   draws        verdict
+  baseline vs mechanistic       400   0.464 [ 0.432, 0.495]   0.022   0.482   0.445   0.182          small
+  baseline vs structural        400   0.493 [ 0.463, 0.525]   0.651   0.506   0.480   0.201     equivalent
+  baseline vs flexible          400   0.538 [ 0.509, 0.568]   0.015   0.527   0.549   0.194          small
+  mechanistic vs structural     400   0.510 [ 0.491, 0.529]   0.304   0.520   0.500   0.285     equivalent
+  mechanistic vs flexible       400   0.517 [ 0.496, 0.539]   0.125   0.539   0.496   0.287     equivalent
+  structural vs flexible        400   0.514 [ 0.496, 0.532]   0.132   0.536   0.491   0.282     equivalent
+  [control] baseline vs itself  400   0.500 [ 0.500, 0.500]   1.000
+  [control] mechanistic vs itself  400   0.500 [ 0.500, 0.500]   1.000
+  [control] structural vs itself  400   0.500 [ 0.500, 0.500]   1.000
+  [control] flexible vs itself  400   0.500 [ 0.500, 0.500]   1.000
+
+== deterministic budget=5  (4000 pairs)
+  pair                            n   score            95% CI       p   P0 wr   P1 wr   draws        verdict
+  baseline vs mechanistic       400   0.506 [ 0.485, 0.526]   0.600   0.497   0.514   0.306     equivalent
+  baseline vs structural        400   0.512 [ 0.489, 0.535]   0.319   0.514   0.510   0.294     equivalent
+  baseline vs flexible          400   0.515 [ 0.491, 0.539]   0.238   0.517   0.512   0.280     equivalent
+  mechanistic vs structural     400   0.499 [ 0.481, 0.517]   0.919   0.524   0.475   0.314     equivalent
+  mechanistic vs flexible       400   0.491 [ 0.469, 0.513]   0.404   0.506   0.476   0.318     equivalent
+  structural vs flexible        400   0.499 [ 0.482, 0.516]   0.916   0.515   0.484   0.304     equivalent
+  [control] baseline vs itself  400   0.500 [ 0.500, 0.500]   1.000
+  [control] mechanistic vs itself  400   0.500 [ 0.500, 0.500]   1.000
+  [control] structural vs itself  400   0.500 [ 0.500, 0.500]   1.000
+  [control] flexible vs itself  400   0.500 [ 0.500, 0.500]   1.000
+

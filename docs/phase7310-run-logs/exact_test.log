@@ -1,0 +1,10 @@
+[split=test, n=500]
+
+exact-reference validation (depth 3): 64 solvable of 500 in split
+  evaluator       best-move agreement   mean move-value loss
+  baseline                      93.8%                  0.125
+  mechanistic                   93.8%                  0.125
+
+  stratum        n        baseline     mechanistic
+  late          63           93.7%           93.7%
+  mid            1          100.0%          100.0%   (n<30)

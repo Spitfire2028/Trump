@@ -1,0 +1,7 @@
+[split=test, n=500]
+
+ISMCTS comparison: 30 positions, common random numbers
+
+   iters   move differs   TVD mean
+      50          33.3%      0.167
+     200          33.3%      0.208

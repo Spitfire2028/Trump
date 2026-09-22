@@ -1,0 +1,13 @@
+draw-order audit over reachable positions, seeds 0..24
+
+  positions where the talon cannot satisfy both       16
+  of those, both players actually need cards          4
+  where priority changes the allocation               2
+
+    own=5 opp=5 talon=1 searcher_is_attacker=True
+      attacker-first: own draws 1, opp draws 0
+      proportional  : own draws 0, opp draws 1
+
+    own=4 opp=1 talon=5 searcher_is_attacker=True
+      attacker-first: own draws 2, opp draws 3
+      proportional  : own draws 1, opp draws 4

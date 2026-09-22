@@ -1,0 +1,18 @@
+  done d1 baseline vs flexible (8s)
+  done d1 baseline vs flex_r1 (16s)
+  done d1 baseline vs flex_r2 (22s)
+  done d1 baseline vs flex_r3 (28s)
+  done d1 baseline vs flex_r4 (36s)
+  done d3 baseline vs flexible (46s)
+  done d3 baseline vs flex_r1 (57s)
+  done d3 baseline vs flex_r2 (66s)
+  done d3 baseline vs flex_r3 (77s)
+  done d3 baseline vs flex_r4 (87s)
+  done d5 baseline vs flexible (100s)
+  done d5 baseline vs flex_r1 (112s)
+  done d5 baseline vs flex_r2 (123s)
+  done d5 baseline vs flex_r3 (134s)
+  done d5 baseline vs flex_r4 (146s)
+
+6000 pairs -> benchmarks/data/crossplay_repairs.json
+RPDONE

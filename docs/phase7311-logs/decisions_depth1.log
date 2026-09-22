@@ -1,0 +1,9 @@
+root-decision disagreement in played games: depth 1, 30 games per pair
+
+  pair                          positions   differ    rate   high-branch rate
+  baseline vs mechanistic            1554      271   17.4%               3.5%
+  baseline vs structural             1441      316   21.9%               1.0%
+  baseline vs flexible               1634      987   60.4%              68.3%
+
+  Decision disagreement is not strength. Phase 7.3.9 established
+  the first; this phase's win rates address the second.

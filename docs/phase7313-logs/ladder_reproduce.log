@@ -1,0 +1,18 @@
+pairwise distinctness over 1636 reachable positions
+
+  pair                            positions differing
+  lad_e3_none vs lad_e3_ti                  83 / 1636
+  lad_e3_none vs lad_e3_ob                 898 / 1636
+  lad_e3_none vs lad_e3_both               948 / 1636
+  lad_e3_none vs lad_e2_none               760 / 1636
+  lad_e3_none vs lad_e2_ob                1079 / 1636
+  lad_e3_ti vs lad_e3_ob                   948 / 1636
+  lad_e3_ti vs lad_e3_both                 898 / 1636
+  lad_e3_ti vs lad_e2_none                 760 / 1636
+  lad_e3_ti vs lad_e2_ob                  1079 / 1636
+  lad_e3_ob vs lad_e3_both                  83 / 1636
+  lad_e3_ob vs lad_e2_none                1079 / 1636
+  lad_e3_ob vs lad_e2_ob                   760 / 1636
+  lad_e3_both vs lad_e2_none              1079 / 1636
+  lad_e3_both vs lad_e2_ob                 760 / 1636
+  lad_e2_none vs lad_e2_ob                 898 / 1636

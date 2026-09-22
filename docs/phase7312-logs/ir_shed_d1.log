@@ -1,0 +1,14 @@
+shed rate on identical positions: depth 1, 25 games, n=1135 choices
+
+  evaluator        sheds a card      rate
+  baseline                 1106     97.4%
+  mechanistic               939     82.7%
+  structural                850     74.9%
+  flexible                  610     53.7%
+  flex_r1                   609     53.7%
+  flex_r2                  1037     91.4%
+  flex_r3                  1046     92.2%
+  flex_r4                   749     66.0%
+
+  Durak is won by running out of cards, so a policy that
+  declines to shed is not expressing a subtlety.

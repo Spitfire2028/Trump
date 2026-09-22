@@ -1,0 +1,21 @@
+  done d1 baseline vs lad_e3_none (7s)
+  done d1 baseline vs lad_e3_ti (13s)
+  done d1 baseline vs lad_e3_ob (18s)
+  done d1 baseline vs lad_e3_both (23s)
+  done d1 baseline vs lad_e2_none (29s)
+  done d1 baseline vs lad_e2_ob (33s)
+  done d3 baseline vs lad_e3_none (43s)
+  done d3 baseline vs lad_e3_ti (51s)
+  done d3 baseline vs lad_e3_ob (60s)
+  done d3 baseline vs lad_e3_both (68s)
+  done d3 baseline vs lad_e2_none (77s)
+  done d3 baseline vs lad_e2_ob (85s)
+  done d5 baseline vs lad_e3_none (95s)
+  done d5 baseline vs lad_e3_ti (106s)
+  done d5 baseline vs lad_e3_ob (116s)
+  done d5 baseline vs lad_e3_both (125s)
+  done d5 baseline vs lad_e2_none (135s)
+  done d5 baseline vs lad_e2_ob (145s)
+
+7200 pairs -> benchmarks/data/ladder_deterministic.json
+DONE
